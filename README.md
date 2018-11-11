@@ -1,5 +1,6 @@
 # FYP
-My Final Year Project
+My Final Year Project.
+
 The purpose of this project is to develop a music browsing tool for Discogs.
 
 # Project Description #
