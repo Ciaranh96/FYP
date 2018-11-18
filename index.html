@@ -7,19 +7,35 @@
 
   <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 </head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
 <body>
 
 <div id="root">
-  <div ng-app="">
-    <p>Artist : <input type="text" ng-model="name" id="test"></p>
-    <h1>{{name}}</h1>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <form ng-submit="newArtist()" ng-controller="myCtrl">
+      Artist :
+      <input type="text" ng-model="artistName" name="artistNameText"/>
+      <input type="submit" id="submitArtistName" value="Submit"/>
+      <!-- <input  type="submit" ng-submit="newArtist()" ng-model="artistName" id="test"> -->
+
+    </br/>{{artistName}}<br>
+
+      <div class="container">
+        <div class ="card" ng-repeat="x in myWelcome">
+          <h3>{{x.title}}</h3>
+          <img src={{x.cover_image}}></img>
+        </div>
+      </div>
+      </form>
   </div>
 </div>
 
 <script src="script.js"></script>
+<script src="myApp.js"></script>
+<script src="myCtrl.js"></script>
 </body>
 </html>
